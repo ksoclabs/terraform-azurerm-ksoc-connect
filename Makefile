@@ -2,8 +2,11 @@ initialise:
 	pre-commit install
 	pre-commit run -a
 
-changelog:
-	git-chglog -o CHANGELOG.md --next-tag `semtag final -s minor -o`
+# e.g. make changelog-{major,minor,patch}
+changelog-%:
+	git-chglog -o CHANGELOG.md --next-tag `semtag final -s $* -o`
 
-release:
-	semtag final -s minor
+# e.g. make semtag-{major,minor,patch}
+.PHONY: semtag-%
+semtag-%:
+	semtag final -s $*
