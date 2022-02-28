@@ -6,6 +6,14 @@ Allows KSOC to connect to your Azure accounts to perform AKS discovery and perfo
 
 This module is available in the [Terraform Registry](https://registry.terraform.io/) see [here](https://registry.terraform.io/modules/ksoclabs/ksoc-connect/azure/latest).
 
+## Contributing
+
+The most important thing to be aware of when contributing is that we leverage the [Semantic Release Action](https://github.com/cycjimmy/semantic-release-action) to automate our changelog, see [here](CHANGELOG.md).
+
+This requires us to use [conventional git commits](https://www.conventionalcommits.org/en/v1.0.0/) when committing to this repository.
+
+Each PR merge into the `main` branch will execute the release process defined [here](.github/workflows/release.yml).
+
 ## Usage
 
 During the sign-up process, you will need to execute this module to allow KSOC to discovery AKS clusters and perform monitoring.
