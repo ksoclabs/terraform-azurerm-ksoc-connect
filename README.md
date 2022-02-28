@@ -4,7 +4,7 @@ Allows KSOC to connect to your Azure accounts to perform AKS discovery and perfo
 
 ## Terraform Registry
 
-This module is available in the [Terraform Registry](https://registry.terraform.io/) see [here](https://registry.terraform.io/modules/ksoclabs/ksoc-connect/azure/latest).
+This module is available in the [Terraform Registry](https://registry.terraform.io/) see [here](https://registry.terraform.io/modules/ksoclabs/ksoc-connect/azurerm/latest).
 
 ## Contributing
 
