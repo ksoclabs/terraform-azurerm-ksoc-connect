@@ -10,19 +10,18 @@ This module is available in the [Terraform Registry](https://registry.terraform.
 
 During the sign-up process, you will need to execute this module to allow KSOC to discovery AKS clusters and perform monitoring.
 
-Use the following to configure the Azure Terraform provider, adding the necessary values inside `<>` brackets:
+Use the following to configure the Azure Terraform provider:
 
 ```terraform
 provider "azuread" {
-  tenant_id = <tenant_id>
+  tenant_id = <add your azure tenant id here>
 }
 
 provider "azurerm" {
-  features {
-  }
-  client_id       = <terraform_client_id>
-  subscription_id = <subscription_id>
-  tenant_id       = <tenant_id>
+  features {}
+  client_id       = <add your azure client id here>
+  subscription_id = <add your azure subscription id here>
+  tenant_id       = <add your azure tenant id here>
 }
 ```
 
