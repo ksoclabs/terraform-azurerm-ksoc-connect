@@ -13,4 +13,5 @@ jobs:
     steps:
       - uses: nuuday/github-changelog-action@v1.0.0
         with:
+          config_dir: ".chglog"
           next_version: "v0.0.1"
