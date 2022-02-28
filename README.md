@@ -34,10 +34,6 @@ module ksoc_connect {
 
 Once applied, you need to provide your Azure tenant and subscription ID to KSOC to complete the connection process.
 
-## Releases
-
-For information on the release process see [here](docs/release-process.md).
-
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
