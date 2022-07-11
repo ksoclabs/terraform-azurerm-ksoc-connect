@@ -8,7 +8,7 @@ resource "azurerm_role_definition" "ksoc" {
   permissions {
     actions = [
       "Microsoft.ContainerService/managedClusters/read",
-      "Microsoft.ContainerService/managedClusters/listClusterUserCredential",
+      "Microsoft.ContainerService/managedClusters/listClusterUserCredential/action",
     ]
     not_actions = []
   }
