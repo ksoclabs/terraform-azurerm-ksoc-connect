@@ -34,8 +34,8 @@ provider "azurerm" {
 ```
 
 ``` terraform
-module ksoc_connect {
-  source  = "ksoclabs/ksoc-connect/azure"
+module "ksoc-connect" {
+  source  = "ksoclabs/ksoc-connect/azurerm"
   version = "<version>"
 }
 ```
