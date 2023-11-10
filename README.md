@@ -53,15 +53,17 @@ Once applied, KSOC will start synchronizing your resources with KSOC.
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.8 |
-| <a name="requirement_azuread"></a> [azuread](#requirement\_azuread) | = 2.26.1 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | = 3.13.0 |
+| <a name="requirement_azuread"></a> [azuread](#requirement\_azuread) | 2.38.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | 3.54.0 |
+| <a name="requirement_ksoc"></a> [ksoc](#requirement\_ksoc) | >= 0.1.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azuread"></a> [azuread](#provider\_azuread) | = 2.26.1 |
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | = 3.13.0 |
+| <a name="provider_azuread"></a> [azuread](#provider\_azuread) | 2.38.0 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.54.0 |
+| <a name="provider_ksoc"></a> [ksoc](#provider\_ksoc) | >= 0.1.0 |
 
 ## Modules
 
@@ -71,18 +73,19 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [azuread_app_role_assignment.ksoc](https://registry.terraform.io/providers/hashicorp/azuread/2.26.1/docs/resources/app_role_assignment) | resource |
-| [azuread_service_principal.ksoc](https://registry.terraform.io/providers/hashicorp/azuread/2.26.1/docs/resources/service_principal) | resource |
-| [azurerm_role_assignment.ksoc](https://registry.terraform.io/providers/hashicorp/azurerm/3.13.0/docs/resources/role_assignment) | resource |
-| [azurerm_role_definition.ksoc](https://registry.terraform.io/providers/hashicorp/azurerm/3.13.0/docs/resources/role_definition) | resource |
-| [azurerm_subscription.primary](https://registry.terraform.io/providers/hashicorp/azurerm/3.13.0/docs/data-sources/subscription) | data source |
+| [azuread_app_role_assignment.ksoc](https://registry.terraform.io/providers/hashicorp/azuread/2.38.0/docs/resources/app_role_assignment) | resource |
+| [azuread_service_principal.ksoc](https://registry.terraform.io/providers/hashicorp/azuread/2.38.0/docs/resources/service_principal) | resource |
+| [azurerm_role_assignment.ksoc](https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/role_assignment) | resource |
+| [azurerm_role_definition.ksoc](https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/resources/role_definition) | resource |
+| [ksoc_azure_register.this](https://registry.terraform.io/providers/ksoclabs/ksoc/latest/docs/resources/azure_register) | resource |
+| [azurerm_subscription.primary](https://registry.terraform.io/providers/hashicorp/azurerm/3.54.0/docs/data-sources/subscription) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_ksoc_app_id"></a> [ksoc\_app\_id](#input\_ksoc\_app\_id) | The ID of the KSOC Azure application. | `string` | `"9c15e8ef-e43f-47aa-8476-227fc2ca27c7"` | no |
-| <a name="input_ksoc_app_role_id"></a> [ksoc\_app\_role\_id](#input\_ksoc\_app\_role\_id) | The Role ID of the KSOC Azure application. | `string` | `"40565363-d363-2294-2fff-9eec0d248dfc"` | no |
+| <a name="input_ksoc_app_id"></a> [ksoc\_app\_id](#input\_ksoc\_app\_id) | The ID of the KSOC Azure application. | `string` | `"4ba48a95-c5da-41d1-897a-57bdf7e34e5b"` | no |
+| <a name="input_ksoc_role_name"></a> [ksoc\_role\_name](#input\_ksoc\_role\_name) | Name of custom role to assume | `string` | `"ksoc-connect"` | no |
 
 ## Outputs
 

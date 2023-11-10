@@ -5,7 +5,7 @@ variable "ksoc_app_id" {
 }
 
 variable "ksoc_role_name" {
-  type = string
-  default = "ksoc-connect"
+  type        = string
+  default     = "ksoc-connect"
   description = "Name of custom role to assume"
 }
