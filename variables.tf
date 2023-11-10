@@ -1,11 +1,11 @@
 variable "ksoc_app_id" {
   type        = string
-  default     = "9c15e8ef-e43f-47aa-8476-227fc2ca27c7"
+  default     = "4ba48a95-c5da-41d1-897a-57bdf7e34e5b"
   description = "The ID of the KSOC Azure application."
 }
 
-variable "ksoc_app_role_id" {
-  type        = string
-  default     = "40565363-d363-2294-2fff-9eec0d248dfc"
-  description = "The Role ID of the KSOC Azure application."
+variable "ksoc_role_name" {
+  type = string
+  default = "ksoc-connect"
+  description = "Name of custom role to assume"
 }

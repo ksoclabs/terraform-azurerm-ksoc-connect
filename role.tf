@@ -1,12 +1,11 @@
-data "azurerm_subscription" "primary" {}
-
 resource "azurerm_role_definition" "ksoc" {
-  name        = "ksoc"
+  name        = var.ksoc_role_name
   scope       = data.azurerm_subscription.primary.id
-  description = "Allow KSOC read access to AKS cluster configuration"
+  description = "Allow KSOC read access to your cloud account"
 
   permissions {
     actions = [
+      "Microsoft.ContainerService/managedClusters/upgradeProfiles/read",
       "Microsoft.ContainerService/managedClusters/read",
       "Microsoft.ContainerService/managedClusters/listClusterUserCredential/action",
     ]

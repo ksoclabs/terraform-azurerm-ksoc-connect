@@ -1,6 +1,6 @@
 # terraform-azurerm-ksoc-connect
 
-Allows KSOC to connect to your Azure accounts to perform AKS discovery and perform pro-active monitoring of these resources.
+Allows KSOC to connect to your Azure accounts to allow for AKS cluster discovery.
 
 ## Terraform Registry
 
@@ -22,14 +22,19 @@ Use the following to configure the Azure Terraform provider:
 
 ```terraform
 provider "azuread" {
-  tenant_id = <add your azure tenant id here>
+  tenant_id = "YOUR_AZURE_TENANT_ID"
 }
 
 provider "azurerm" {
   features {}
-  client_id       = <add your azure client id here>
-  subscription_id = <add your azure subscription id here>
-  tenant_id       = <add your azure tenant id here>
+  client_id       = "YOUR_AZURE_CLIENT_ID"
+  subscription_id = "YOUR_AZURE_SUBSCRIPTION_ID"
+  tenant_id       = "YOUR_AZURE_TENANT_ID"
+}
+
+provider "ksoc" {
+    access_key_id = "KSOC_ACCESS_KEY"
+    secret_key    = "KSOC_SECRET_KEY"
 }
 ```
 
@@ -40,7 +45,7 @@ module "ksoc-connect" {
 }
 ```
 
-Once applied, you need to provide your Azure tenant and subscription ID to KSOC to complete the connection process.
+Once applied, KSOC will start synchronizing your resources with KSOC.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
