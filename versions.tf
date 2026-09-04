@@ -8,7 +8,7 @@ terraform {
     }
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "3.54.0"
+      version = "5.4.0"
     }
     ksoc = {
       source  = "ksoclabs/ksoc"
